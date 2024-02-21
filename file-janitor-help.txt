@@ -5,3 +5,5 @@ Usage: file-janitor [option] [file_path]
    options:
        help    displays this help file
        list    lists files and subdirectories in the current directory if [file-path] is not specified
+       report  display a summary of *.tmp, *.log and *.py files located inside od [file-path] 
+               or current directory if [file-path] is not specified
