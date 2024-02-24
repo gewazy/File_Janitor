@@ -1,9 +1,10 @@
 File Janitor is a tool to discover files and clean directories
 
 Usage: file-janitor [option] [file_path]
-
+       If [fiele_path] is not specified, the current directory is used.
    options:
        help    displays this help file
-       list    lists files and subdirectories in the current directory if [file-path] is not specified
-       report  display a summary of *.tmp, *.log and *.py files located inside od [file-path] 
-               or current directory if [file-path] is not specified
+       list    lists files and subdirectories in [file-path]
+       report  display a summary of *.tmp, *.log and *.py files located inside [file-path]
+       clean   deletes all *.tmp files, deletes *.log files older than 3 days, moves python files to
+               'python_scripts' directory, creates directory if it does not exist. 
