@@ -88,8 +88,8 @@ cleaner() {
         count=$(find $path -maxdepth 1 -type f -name "*.py" | wc -l)
 		if [[  $count -gt 0  ]]; then 
 				if [  ! -e "$path/python_scripts"  ]; then
+					mkdir "$path/python_scripts"
 				fi
-			echo "$path/python_scripts"
 			find $path -maxdepth 1 -type f -name "*.py" -exec mv {} "$path/python_scripts/" \;
 		fi
 		echo "done! $count files have been moved" 
